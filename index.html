@@ -90,7 +90,7 @@
             <a href="#portfolio">Projects</a>
             <a href="#faqs">FAQs</a>
             <a href="#testimonials">Testimonials</a>
-            <a href="#contact">Contact Us</a>
+            <a href="#footer">Contact Us</a>
         </nav>
     </header>
 
@@ -189,37 +189,6 @@
         </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form action="/submit_contact" method="post">
-            <div>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div>
-                <label for="phone">Phone:</label>
-                <input type="tel" id="phone" name="phone" required>
-            </div>
-            <div>
-                <label for="hear_about_us">How Did You Hear About Us:</label>
-                <select id="hear_about_us" name="hear_about_us">
-                    <option value="google">Google</option>
-                    <option value="social_media">Social Media</option>
-                    <option value="referral">Referral</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
-            <div>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-            </div>
-            <div>
-                <button type="submit">Submit</button>
-            </div>
-        </form>
-        <p id="success-message" style="display: none;">Thank you for your request. We will get back to you shortly.</p>
-    </section>
-
     <footer class="footer">
         <p>Contact us: (641) 203-8046 | cody_101_23@hotmail.com</p>
         <p>
@@ -229,27 +198,6 @@
         </p>
         <p>&copy; 2024 Hackney Construction</p>
     </footer>
-
-    <script>
-        document.querySelectorAll('.faq-question').forEach(item => {
-            item.addEventListener('click', event => {
-                const answer = item.nextElementSibling;
-                answer.classList.toggle('show');
-                const icon = item.querySelector('.toggle-icon');
-                if (answer.classList.contains('show')) {
-                    icon.textContent = '-';
-                } else {
-                    icon.textContent = '+';
-                }
-            });
-        });
-
-        // Simulate form submission success message
-        document.querySelector('form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            document.getElementById('success-message').style.display = 'block';
-        });
-    </script>
 </body>
 </html>
 </body>
