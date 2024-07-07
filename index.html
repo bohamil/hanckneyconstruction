@@ -198,7 +198,20 @@
         </p>
         <p>&copy; 2024 Hackney Construction</p>
     </footer>
-</body>
-</html>
+    
+    <script>
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const answer = item.nextElementSibling;
+                answer.classList.toggle('show');
+                const icon = item.querySelector('.toggle-icon');
+                if (answer.classList.contains('show')) {
+                    icon.textContent = '-';
+                } else {
+                    icon.textContent = '+';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
