@@ -7,11 +7,38 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        header nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .logo img {
+            height: 100px;
+            width: auto;
+        }
+        #hero {
+            background: url('images/hero-bg.jpg') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
         .services-horizontal-scroll {
             display: flex;
             overflow-x: auto;
             scroll-snap-type: x mandatory;
             -webkit-overflow-scrolling: touch;
+            padding: 20px;
         }
         .service-item {
             flex: 0 0 auto;
@@ -19,7 +46,7 @@
             box-sizing: border-box;
             padding: 20px;
             margin-right: 20px;
-            background-color: rgba(105, 105, 105, 0.8); /* Dark grey with 80% opacity */
+            background-color: rgba(105, 105, 105, 0.8);
             color: white;
             border-radius: 10px;
             text-align: center;
@@ -29,23 +56,17 @@
             display: flex;
             gap: 20px;
             align-items: flex-start;
-            flex-wrap: wrap; /* Ensure proper alignment on smaller screens */
+            flex-wrap: wrap;
+            padding: 20px;
         }
-        .faq-content {
-            flex: 1 1 45%; /* Adjust flex-basis to 45% for some gap */
-            order: 1; /* Ensure this appears first */
-            box-sizing: border-box;
-        }
-        .faq-image {
-            flex: 1 1 45%; /* Adjust flex-basis to 45% for some gap */
-            order: 2; /* Ensure this appears second */
+        .faq-content, .faq-image {
+            flex: 1 1 45%;
             box-sizing: border-box;
         }
         .faq-image img {
-            width: auto;
-            height: 500px; /* Fixed height for the image */
+            width: 100%;
+            height: auto;
             display: block;
-            margin: auto; /* Center the image horizontally */
         }
         .faq-item {
             margin-bottom: 10px;
@@ -72,17 +93,28 @@
         .show {
             display: block;
         }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
         .social-icon img {
             width: 40px;
             height: 40px;
             border-radius: 5px;
         }
+        @media (max-width: 768px) {
+            .faq-content, .faq-image {
+                flex: 1 1 100%;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <div class="logo" style="position: absolute; top:85px; left:0px;">
-            <img src="images/HackneyConstructionLogo.png" alt="Hackney Construction Logo" style="height: 170px; width: auto;">
+        <div class="logo">
+            <img src="images/HackneyConstructionLogo.png" alt="Hackney Construction Logo">
         </div>
         <h1>Hackney Construction</h1>
         <nav>
@@ -95,7 +127,7 @@
     </header>
 
     <section id="hero">
-        <div class="hero-content" style="background-color: rgba(105, 105, 105, 0.8); color: white; padding: 20px; border-radius: 5px;">
+        <div class="hero-content">
             <h2>We NAIL it every time</h2>
             <p>Hackney Construction delivers roofing services, specializing in new construction, residential roofing, repairs, and hail damage restoration. As a locally owned business, we are committed to excellence and dedicated to serving our community with top-tier roofing solutions.</p>
         </div>
@@ -140,13 +172,13 @@
                 <img src="images/project3.jpg" alt="Project 3">
             </div>
             <div class="project">
-                <img src="images/project1.jpg" alt="Project 1">
+                <img src="images/project1.jpg" alt="Project 4">
             </div>
             <div class="project">
-                <img src="images/overhead2.jpg" alt="Project 2">
+                <img src="images/overhead2.jpg" alt="Project 5">
             </div>
             <div class="project">
-                <img src="images/project6.jpg" alt="Project 3">
+                <img src="images/project6.jpg" alt="Project 6">
             </div>
         </div>
     </section>
@@ -189,7 +221,7 @@
         </div>
     </section>
 
-    <footer class="footer">
+    <footer>
         <p>Contact us: (641) 203-8046 | cody_101_23@hotmail.com</p>
         <p>
             <a href="https://www.facebook.com/profile.php?id=61559825340943" target="_blank" class="social-icon">
