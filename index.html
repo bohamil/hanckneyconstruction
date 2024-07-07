@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hackney Construction</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         .services-horizontal-scroll {
@@ -96,7 +96,7 @@
 
     <section id="hero">
         <div class="hero-content" style="background-color: rgba(105, 105, 105, 0.8); color: white; padding: 20px; border-radius: 5px;">
-            <h2>We NAIL it everytime</h2>
+            <h2>We NAIL it every time</h2>
             <p>Hackney Construction delivers roofing services, specializing in new construction, residential roofing, repairs, and hail damage restoration. As a locally owned business, we are committed to excellence and dedicated to serving our community with top-tier roofing solutions.</p>
         </div>
     </section>
@@ -131,22 +131,22 @@
         <h2>Projects</h2>
         <div class="gallery">
             <div class="project">
-                <img src="{{ url_for('static', filename='images/overhead.jpg') }}" alt="Project 1">
+                <img src="images/overhead.jpg" alt="Project 1">
             </div>
             <div class="project">
-                <img src="{{ url_for('static', filename='images/project10.jpg') }}" alt="Project 2">
+                <img src="images/project10.jpg" alt="Project 2">
             </div>
             <div class="project">
-                <img src="{{ url_for('static', filename='images/project3.jpg') }}" alt="Project 3">
+                <img src="images/project3.jpg" alt="Project 3">
             </div>
             <div class="project">
-                <img src="{{ url_for('static', filename='images/project1.jpg') }}" alt="Project 1">
+                <img src="images/project1.jpg" alt="Project 1">
             </div>
             <div class="project">
-                <img src="{{ url_for('static', filename='images/overhead2.jpg') }}" alt="Project 2">
+                <img src="images/overhead2.jpg" alt="Project 2">
             </div>
             <div class="project">
-                <img src="{{ url_for('static', filename='images/project6.jpg') }}" alt="Project 3">
+                <img src="images/project6.jpg" alt="Project 3">
             </div>
         </div>
     </section>
@@ -185,7 +185,7 @@
             </div>
         </div>
         <div class="faq-image">
-            <img src="{{ url_for('static', filename='images/project11.jpg') }}" alt="FAQ Image">
+            <img src="images/project11.jpg" alt="FAQ Image">
         </div>
     </section>
 
@@ -217,16 +217,14 @@
                 <button type="submit">Submit</button>
             </div>
         </form>
-        {% if success %}
-        <p>Thank you for your request. We will get back to you shortly.</p>
-        {% endif %}
+        <p id="success-message" style="display: none;">Thank you for your request. We will get back to you shortly.</p>
     </section>
 
     <footer class="footer">
         <p>Contact us: (641) 203-8046 | cody_101_23@hotmail.com</p>
         <p>
             <a href="https://www.facebook.com/profile.php?id=61559825340943" target="_blank" class="social-icon">
-                <img src="{{ url_for('static', filename='images/Facebook_Logo_Primary.png') }}" alt="Facebook Logo">
+                <img src="images/Facebook_Logo_Primary.png" alt="Facebook Logo">
             </a>
         </p>
         <p>&copy; 2024 Hackney Construction</p>
@@ -245,6 +243,14 @@
                 }
             });
         });
+
+        // Simulate form submission success message
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('success-message').style.display = 'block';
+        });
     </script>
+</body>
+</html>
 </body>
 </html>
