@@ -304,18 +304,38 @@
 		</div>
 	  </div>
 	</section>
-<section id="service-map" class="py-5 bg-light border-top">
-  <div class="container">
-    <h2 class="text-center mb-4">📍 Where We Work</h2>
-    <p class="text-center mb-4">We're proud to serve Centerville, Indianola, Carlisle, and surrounding communities across South Central Iowa.</p>
-    <div class="embed-responsive embed-responsive-16by9">
-      <iframe class="embed-responsive-item" 
-              src="https://www.google.com/maps/d/u/0/embed?mid=1Co4uf--qH_RyPZOlqVcJd2R8YggQows" 
-              width="100%" height="480" frameborder="0" allowfullscreen>
-      </iframe>
-    </div>
-  </div>
-</section>
+	<section id="service-map" class="py-5 bg-light border-top">
+	  <div class="container">
+		<h2 class="text-center mb-4">📍 Proudly Serving South Central Iowa</h2>
+		<p class="text-center mb-4">We work in Chariton, Indianola, Centerville, Carlisle, and surrounding communities.</p>
+		<div id="map" style="height: 500px;"></div>
+	  </div>
+	</section>
+
+	<!-- Leaflet Map Scripts -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+	<script>
+	  document.addEventListener('DOMContentLoaded', function () {
+		var map = L.map('map').setView([41.027, -93.330], 9);
+
+		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		  attribution: '&copy; OpenStreetMap contributors'
+		}).addTo(map);
+
+		var locations = [
+		  { name: "Chariton", coords: [41.0161, -93.3069] },
+		  { name: "Indianola", coords: [41.3583, -93.5574] },
+		  { name: "Centerville", coords: [40.7367, -92.8744] },
+		  { name: "Carlisle", coords: [41.5000, -93.4899] }
+		];
+
+		locations.forEach(function(loc) {
+		  L.marker(loc.coords).addTo(map)
+			.bindPopup("<strong>" + loc.name + "</strong>");
+		});
+	  });
+	</script>
 
   <div class="mobile-cta d-block d-md-none text-center fixed-bottom bg-warning py-2">
     <a href="tel:6412038046" class="text-dark font-weight-bold">📞 Call for a Free Quote</a>
