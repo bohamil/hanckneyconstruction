@@ -37,7 +37,7 @@ header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid 
 .footer{background:#0f172a;color:#e5e7eb}
 .footer a{color:#e5e7eb}
 .footer .columns{display:grid;gap:28px;grid-template-columns:2fr 1fr 1fr 1.2fr}
-.footer small{color:#9ca3af}.footer img{height:40px;width:auto}
+.footer small{color:#9ca3af}.footer-logo{height:40px;width:auto}
 @media (max-width:960px){.grid-3{grid-template-columns:1fr 1fr}.grid-2{grid-template-columns:1fr}.footer .columns{grid-template-columns:1fr 1fr}.process::before{display:none}.step{grid-template-columns:64px 1fr}}
 @media (max-width:640px){.mobile-hide{display:none}.kpis{grid-template-columns:1fr}}
 
