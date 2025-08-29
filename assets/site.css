@@ -29,7 +29,7 @@ header{position:sticky;top:0;z-index:50;background:var(--primary);border-bottom:
 .icon{width:28px;height:28px;display:inline-grid;place-items:center;border-radius:999px;background:#eef2f5}
 .ul{margin:10px 0 0 18px}
 .kpis{display:grid;gap:18px;grid-template-columns:repeat(3,minmax(0,1fr))}
-.kpi{background:#fff;border:1px dashed #dfe5ea;border-radius:10px;padding:16px;text-align:center}
+.kpi{background:#fff;border:1px dashed #dfe5ea;border-radius:10px;padding:16px;text-align:center;color:var(--ink)}
 .kpi b{display:block;font:800 28px/1 Montserrat}
 .process{position:relative}
 .process::before{content:"";position:absolute;left:50%;top:40px;bottom:40px;width:4px;background:linear-gradient(var(--secondary),transparent);transform:translateX(-50%)}
