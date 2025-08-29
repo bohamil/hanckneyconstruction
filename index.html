@@ -109,6 +109,8 @@
           <input id="address" name="address" placeholder="Address (City, IA)" style="width:100%;padding:12px;margin-bottom:10px;border:1px solid #dfe5ea;border-radius:8px" required>
           <label class="visually-hidden" for="notes">Notes</label>
           <textarea id="notes" name="notes" placeholder="Leak location, roof age, etc." rows="4" style="width:100%;padding:12px;border:1px solid #dfe5ea;border-radius:8px"></textarea>
+          <input type="text" name="website" style="display:none">
+          <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
           <button class="btn" type="submit" style="margin-top:10px">Request Quote</button>
         </form>
       </div>
@@ -156,9 +158,17 @@
         <a class="btn" href="tel:+16412038046">Call Now</a>
       </div>
     </div>
-    <div style="margin-top:18px"><small>© 2025 Hackney Roofing & Construction</small></div>
+  <div style="margin-top:18px"><small>© 2025 Hackney Roofing & Construction</small></div>
   </div>
 </footer>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>
+  document.querySelector('form').addEventListener('submit', function (e) {
+    if (document.querySelector('input[name="website"]').value) {
+      e.preventDefault();
+    }
+  });
+</script>
 </body>
 </html>
 
