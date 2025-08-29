@@ -2,9 +2,15 @@
   const container = document.getElementById('blog-list');
   if (!container) return;
 
-  // Attempt to derive owner and repo from current location
-  let owner = 'USERNAME'; // replace with your GitHub username if using a custom domain
+  // Attempt to derive owner and repo from meta tags or current location
+  let owner = 'bohamil';
   let repo = 'hanckneyconstruction';
+
+  const metaOwner = document.querySelector('meta[name="github-owner"]')?.content;
+  const metaRepo = document.querySelector('meta[name="github-repo"]')?.content;
+  if (metaOwner) owner = metaOwner;
+  if (metaRepo) repo = metaRepo;
+
   const hostname = window.location.hostname;
   if (hostname.endsWith('github.io')) {
     owner = hostname.split('.')[0];
