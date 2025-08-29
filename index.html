@@ -100,19 +100,21 @@
         <h2>Get a fast, no‑nonsense quote</h2>
         <p>Tell us your address and a couple photos. We’ll confirm scope and price options.
         Prefer phone? <a href="tel:+16412038046">Call (641) 203‑8046</a>.</p>
-        <form action="#" method="post" class="card pad" aria-label="Quote form">
+        <form action="https://docs.google.com/forms/d/e/<FORM_ID>/formResponse" method="post" class="card pad" aria-label="Quote form" id="quote-form">
+          <input type="hidden" name="fvv" value="1">
           <label class="visually-hidden" for="name">Name</label>
-          <input id="name" name="name" placeholder="Name" style="width:100%;padding:12px;margin-bottom:10px;border:1px solid #dfe5ea;border-radius:8px" required>
+          <input id="name" name="entry.2005620554" placeholder="Name" style="width:100%;padding:12px;margin-bottom:10px;border:1px solid #dfe5ea;border-radius:8px" required>
           <label class="visually-hidden" for="phone">Phone</label>
-          <input id="phone" name="phone" placeholder="Phone" style="width:100%;padding:12px;margin-bottom:10px;border:1px solid #dfe5ea;border-radius:8px" required>
+          <input id="phone" name="entry.1166974658" placeholder="Phone" style="width:100%;padding:12px;margin-bottom:10px;border:1px solid #dfe5ea;border-radius:8px" required>
           <label class="visually-hidden" for="address">Address</label>
-          <input id="address" name="address" placeholder="Address (City, IA)" style="width:100%;padding:12px;margin-bottom:10px;border:1px solid #dfe5ea;border-radius:8px" required>
+          <input id="address" name="entry.839337160" placeholder="Address (City, IA)" style="width:100%;padding:12px;margin-bottom:10px;border:1px solid #dfe5ea;border-radius:8px" required>
           <label class="visually-hidden" for="notes">Notes</label>
           <textarea id="notes" name="notes" placeholder="Leak location, roof age, etc." rows="4" style="width:100%;padding:12px;border:1px solid #dfe5ea;border-radius:8px"></textarea>
           <input type="text" name="website" style="display:none">
           <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
           <button class="btn" type="submit" style="margin-top:10px">Request Quote</button>
         </form>
+        <div id="form-status" role="status" aria-live="polite" style="margin-top:10px"></div>
       </div>
       <aside class="card pad" aria-label="Reasons to act now">
         <h3>Why act before first frost</h3>
