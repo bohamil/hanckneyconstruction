@@ -100,7 +100,7 @@
         <h2>Get a fast, no‑nonsense quote</h2>
         <p>Tell us your address and a couple photos. We’ll confirm scope and price options.
         Prefer phone? <a href="tel:+16412038046">Call (641) 203‑8046</a>.</p>
-        <form action="#" method="post" class="card pad" aria-label="Quote form">
+        <form id="quote-form" action="#" method="post" class="card pad" aria-label="Quote form">
           <label class="visually-hidden" for="name">Name</label>
           <input id="name" name="name" placeholder="Name" style="width:100%;padding:12px;margin-bottom:10px;border:1px solid #dfe5ea;border-radius:8px" required>
           <label class="visually-hidden" for="phone">Phone</label>
@@ -111,6 +111,7 @@
           <textarea id="notes" name="notes" placeholder="Leak location, roof age, etc." rows="4" style="width:100%;padding:12px;border:1px solid #dfe5ea;border-radius:8px"></textarea>
           <button class="btn" type="submit" style="margin-top:10px">Request Quote</button>
         </form>
+        <div id="form-status" role="status" aria-live="polite" style="margin-top:10px"></div>
       </div>
       <aside class="card pad" aria-label="Reasons to act now">
         <h3>Why act before first frost</h3>
@@ -159,6 +160,29 @@
     <div style="margin-top:18px"><small>© 2025 Hackney Roofing & Construction</small></div>
   </div>
 </footer>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('quote-form');
+  const status = document.getElementById('form-status');
+  if (!form || !status) return;
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    try {
+      const response = await fetch(form.action || window.location.href, {
+        method: form.method || 'POST',
+        body: data
+      });
+      if (!response.ok) throw new Error('Network response was not ok');
+      status.textContent = 'Thanks! We’ll be in touch soon.';
+      form.reset();
+    } catch (err) {
+      console.error('Form submission failed', err);
+      status.textContent = 'Sorry, there was a problem submitting the form. Please try again later.';
+    }
+  });
+});
+</script>
 </body>
 </html>
 
