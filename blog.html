@@ -1,26 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Blog | Hackney Construction</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <title>Blog | Hackney Roofing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="github-owner" content="bohamil" />
   <meta name="github-repo" content="hanckneyconstruction" />
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="styles.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site.css" />
 </head>
 <body>
-  <header class="bg-dark text-white text-center py-4">
-    <h1>📰 Roofing Insights & Storm Tips</h1>
-    <p>
-      <a href="index.html" style="color: #F4D35E;">← Back to Home</a> |
-      <a href="/#quote" style="color: #F4D35E;">Get a Quote</a>
-    </p>
+  <header>
+    <div class="container nav" role="navigation" aria-label="Main">
+      <a class="brand" href="/">
+        <img src="images/SawLogo_White.png" alt="Hackney Roofing logo" width="3600" height="2709" />
+        <span class="title"><b>HACKNEY ROOFING</b><small>Roof Repair • Replacement • Fresh Roof</small></span>
+      </a>
+      <nav class="mobile-hide" aria-label="Primary">
+        <a href="/#services">Services</a>
+        <a href="/#fresh-roof">Fresh Roof</a>
+        <a href="/#process">Process</a>
+        <a href="/blog.html">Blog</a>
+        <a class="btn" href="tel:+16412038046" aria-label="Call for free inspection">Call (641) 203‑8046</a>
+      </nav>
+    </div>
   </header>
 
-  <section class="container py-5">
-    <div class="row" id="blog-list"></div>
-  </section>
+  <main>
+    <section class="container py-5">
+      <div class="row" id="blog-list"></div>
+    </section>
+  </main>
 
   <script src="blog.js"></script>
 </body>
