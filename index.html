@@ -117,7 +117,7 @@
                  required style="width:100%;padding:12px;margin-bottom:10px;border:1px solid #dfe5ea;border-radius:8px">
 
           <label class="visually-hidden" for="phone">Phone</label>
-          <input id="phone" name="entry.1015733403" placeholder="Phone"
+          <input id="phone" name="entry.1015733403" placeholder="(123) 456-7890"
                  type="tel" inputmode="numeric" autocomplete="tel"
                  required style="width:100%;padding:12px;margin-bottom:10px;border:1px solid #dfe5ea;border-radius:8px">
 
@@ -141,7 +141,8 @@
           const submitBtn = document.getElementById('submitBtn');
         
           const digitsOnly = v => (v || '').replace(/\D/g, '');
-          const fmt = d => d.length<=3 ? `(${d}` :
+          const fmt = d => d.length === 0 ? '' :
+                            d.length<=3 ? `(${d}` :
                             d.length<=6 ? `(${d.slice(0,3)}) ${d.slice(3)}` :
                             `(${d.slice(0,3)}) ${d.slice(3,6)}-${d.slice(6,10)}`;
         
