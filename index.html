@@ -137,41 +137,44 @@
         </form>
 
         <div id="form-status" role="status" aria-live="polite" style="margin-top:10px"></div>
-
         <script>
           const form = document.getElementById('quote-form');
           const phone = document.getElementById('phone');
           const statusBox = document.getElementById('form-status');
           const errorBox = document.getElementById('form-error');
           const submitBtn = document.getElementById('submitBtn');
+        
           const digitsOnly = v => (v || '').replace(/\D/g, '');
           const fmt = d => d.length<=3 ? `(${d}` :
-                        d.length<=6 ? `(${d.slice(0,3)}) ${d.slice(3)}` :
-                        `(${d.slice(0,3)}) ${d.slice(3,6)}-${d.slice(6,10)}`;
-
+                            d.length<=6 ? `(${d.slice(0,3)}) ${d.slice(3)}` :
+                            `(${d.slice(0,3)}) ${d.slice(3,6)}-${d.slice(6,10)}`;
+        
           function validate() {
             const d = digitsOnly(phone.value).slice(0,10);
-            phone.value = fmt(d);
+            phone.value = fmt(d); // pretty while typing
             const ok = d.length === 10 && form.checkValidity();
             submitBtn.disabled = !ok;
             errorBox.style.display = ok ? 'none' : 'block';
             errorBox.textContent = ok ? '' : 'Phone must be exactly 10 digits.';
             return ok;
           }
-
           phone.addEventListener('input', validate);
           form.addEventListener('input', validate);
-
+        
           form.addEventListener('submit', (e) => {
             if (document.querySelector('input[name="website"]').value || !validate()) {
               e.preventDefault();
               return;
             }
+            // ——— CRITICAL: send digits only to satisfy Google validation ———
+            const d = digitsOnly(phone.value).slice(0,10);
+            phone.value = d; // e.g., "6412038046"
+            // ———————————————————————————————————————————————————————————————
             window._submittedToGoogle = true;
             statusBox.textContent = 'Submitting…';
-            // allow the POST to continue to the hidden iframe
+            // let the POST go to the hidden iframe
           });
-
+        
           document.getElementById('hidden_iframe').addEventListener('load', () => {
             if (window._submittedToGoogle) {
               window._submittedToGoogle = false;
@@ -182,7 +185,7 @@
               errorBox.textContent = '';
             }
           });
-
+        
           validate();
         </script>
       </div>
