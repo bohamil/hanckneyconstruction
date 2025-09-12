@@ -114,6 +114,7 @@
           <button class="btn" type="submit" style="margin-top:10px">Request Quote</button>
         </form>
         <div id="form-status" role="status" aria-live="polite" style="margin-top:10px"></div>
+        <div id="form-error" role="alert" style="margin-top:10px;color:#c00"></div>
       </div>
       <aside class="card pad" aria-label="Reasons to act now">
         <h3>Why act before first frost</h3>
@@ -164,9 +165,39 @@
 </footer>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script>
-  document.querySelector('form').addEventListener('submit', function (e) {
-    if (document.querySelector('input[name="website"]').value) {
+  const form = document.getElementById('quote-form');
+  const statusBox = document.getElementById('form-status');
+  const errorBox = document.getElementById('form-error');
+
+  form.addEventListener('submit', async function (e) {
+    if (form.querySelector('input[name="website"]').value) {
       e.preventDefault();
+      return;
+    }
+    e.preventDefault();
+
+    errorBox.textContent = '';
+
+    const required = ['name', 'phone', 'address'];
+    for (const id of required) {
+      if (!form.querySelector('#' + id).value.trim()) {
+        errorBox.textContent = 'Please fill out all required fields.';
+        return;
+      }
+    }
+
+    statusBox.textContent = 'Submitting...';
+    try {
+      await fetch(form.action, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: new FormData(form)
+      });
+      statusBox.textContent = "Thanks! We'll be in touch soon.";
+      form.reset();
+    } catch (err) {
+      statusBox.textContent = '';
+      errorBox.textContent = 'Submission failed. Please try again later.';
     }
   });
 </script>
