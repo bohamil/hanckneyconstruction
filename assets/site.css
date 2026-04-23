@@ -7,6 +7,7 @@ a{color:var(--primary);text-decoration:none}a:hover{text-decoration:underline}
 header{position:sticky;top:0;z-index:50;background:var(--primary);border-bottom:1px solid #eef2f5}
 .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
 .nav a{font-weight:700;color:#fff}
+.nav .nav-cta{background:var(--secondary);padding:.55rem .9rem;border-radius:999px;box-shadow:none}
 .brand{display:flex;gap:12px;align-items:center}
 .brand img{height:48px;width:auto}
 .brand .title{display:flex;flex-direction:column;color:#fff}
@@ -18,6 +19,27 @@ header{position:sticky;top:0;z-index:50;background:var(--primary);border-bottom:
 .hero .cta{display:flex;gap:12px;flex-wrap:wrap}
 .section{padding:72px 0}
 .section-muted{background:var(--muted)}
+.page-hero{padding:84px 0;background:linear-gradient(rgba(0,0,0,.62),rgba(0,0,0,.62)),url('../images/overhead2.jpg') center/cover;color:#fff}
+.page-hero h1{font:800 42px/1.1 Montserrat,Arial,Helvetica,sans-serif;margin:0 0 14px;max-width:920px}
+.page-hero p{font-size:19px;max-width:760px;margin:0 0 22px}
+.eyebrow{display:inline-block;margin-bottom:12px;color:#f8d49a;font:800 12px/1 Montserrat,Arial;text-transform:uppercase;letter-spacing:.08em}
+.lead{font-size:19px;max-width:820px}
+.trust-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:24px}
+.trust-item{background:#fff;border:1px solid #e8eef3;border-radius:12px;padding:18px}
+.trust-item b{display:block;color:var(--primary);font:800 20px/1.2 Montserrat,Arial;margin-bottom:6px}
+.service-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:22px}
+.service-list article{background:#fff;border:1px solid #e8eef3;border-radius:12px;padding:18px}
+.conversion-band{background:var(--primary);color:#fff;padding:42px 0}
+.conversion-band .container{display:flex;align-items:center;justify-content:space-between;gap:18px}
+.conversion-band h2{margin:0 0 6px}
+.conversion-band p{margin:0}
+.conversion-band .btn-outline{background:transparent;color:#fff;border-color:#fff}
+.town-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.town-links a{background:#eef5f9;border:1px solid #dce8ef;border-radius:999px;padding:8px 12px;font-weight:700}
+.sticky-call{display:none;position:fixed;left:0;right:0;bottom:0;z-index:80;background:#fff;border-top:1px solid #dfe5ea;box-shadow:0 -8px 24px rgba(0,0,0,.14);padding:10px}
+.sticky-call a{flex:1;text-align:center;border-radius:999px;padding:12px 10px;font-weight:800}
+.sticky-call .call{background:var(--secondary);color:#fff}
+.sticky-call .estimate{background:var(--primary);color:#fff}
 .grid{display:grid;gap:26px}
 .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
 .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -40,8 +62,8 @@ header{position:sticky;top:0;z-index:50;background:var(--primary);border-bottom:
 .footer a{color:#e5e7eb}
 .footer .columns{display:grid;gap:28px;grid-template-columns:2fr 1fr 1fr 1.2fr}
 .footer small{color:#9ca3af}.footer-logo{height:40px;width:auto}
-@media (max-width:960px){.grid-3{grid-template-columns:1fr 1fr}.grid-2{grid-template-columns:1fr}.footer .columns{grid-template-columns:1fr 1fr}.process::before{display:none}.step{grid-template-columns:64px 1fr}}
-@media (max-width:640px){.mobile-hide{display:none}.kpis{grid-template-columns:1fr}}
+@media (max-width:960px){.grid-3{grid-template-columns:1fr 1fr}.grid-2{grid-template-columns:1fr}.footer .columns{grid-template-columns:1fr 1fr}.process::before{display:none}.step{grid-template-columns:64px 1fr}.trust-grid{grid-template-columns:1fr 1fr}.service-list{grid-template-columns:1fr}.conversion-band .container{display:block}.conversion-band .cta{margin-top:18px}}
+@media (max-width:640px){body{padding-bottom:76px}.mobile-hide{display:none}.kpis{grid-template-columns:1fr}.trust-grid{grid-template-columns:1fr}.page-hero{padding:58px 0}.page-hero h1{font-size:32px}.sticky-call{display:flex;gap:10px}}
 
 /* Blog */
 .blog-hero{padding:56px 0 24px;background:var(--muted);border-bottom:1px solid #eef2f5}
@@ -55,4 +77,3 @@ header{position:sticky;top:0;z-index:50;background:var(--primary);border-bottom:
 
 /* Utilities */
 .visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
-
