@@ -34,7 +34,7 @@ img{max-width:100%}
 .hero-metrics b{display:block;font-family:"Source Serif 4",Georgia,serif;font-size:28px;font-weight:600;line-height:1.1;color:var(--primary)}
 .hero-metrics span{display:block;margin-top:4px;color:var(--ink-soft);font-size:13px}
 .hero-photo-wrap{position:relative;min-width:0}
-.hero-photo{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:14px;box-shadow:0 32px 70px rgba(49,42,31,.18)}
+.hero-photo{display:block;width:100%;aspect-ratio:5/4;object-fit:cover;object-position:center;border-radius:14px;box-shadow:0 32px 70px rgba(49,42,31,.18)}
 .review-card{position:absolute;left:-24px;bottom:30px;width:min(255px,58%);background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;box-shadow:0 22px 46px rgba(49,42,31,.16)}
 .review-card .stars{color:var(--secondary);font:800 12px/1 "Geist Mono",ui-monospace,monospace;text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px}
 .review-card p{margin:0 0 8px;color:var(--ink);font-size:14px;line-height:1.4}
