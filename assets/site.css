@@ -20,8 +20,8 @@ img{max-width:100%}
 .brand .title b{font-size:14px;letter-spacing:.04em}
 .brand .title small{font:700 10.5px/1.2 "Geist Mono",ui-monospace,monospace;color:var(--ink-soft);margin-top:3px}
 .mobile-hide{display:flex;align-items:center;gap:22px;font-size:14px}
-.safe-hero{padding:76px 0 88px;background:var(--paper)}
-.safe-hero-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(390px,.92fr);gap:64px;align-items:center}
+.safe-hero{padding:64px 0 72px;background:var(--paper)}
+.safe-hero-grid{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(430px,.98fr);gap:56px;align-items:center}
 .safe-hero-copy{max-width:690px}
 .pill{display:inline-flex;align-items:center;gap:9px;border-radius:999px;background:#ead7cb;color:var(--secondary-dark);padding:7px 12px;margin-bottom:24px;font:800 12px/1 "Geist Mono",ui-monospace,monospace;text-transform:uppercase;letter-spacing:.06em}
 .pill span{width:7px;height:7px;border-radius:50%;background:var(--secondary)}
@@ -34,7 +34,7 @@ img{max-width:100%}
 .hero-metrics b{display:block;font-family:"Source Serif 4",Georgia,serif;font-size:28px;font-weight:600;line-height:1.1;color:var(--primary)}
 .hero-metrics span{display:block;margin-top:4px;color:var(--ink-soft);font-size:13px}
 .hero-photo-wrap{position:relative;min-width:0}
-.hero-photo{display:block;width:100%;aspect-ratio:16/11;max-height:520px;object-fit:cover;object-position:center 58%;border-radius:14px;box-shadow:0 32px 70px rgba(49,42,31,.18)}
+.hero-photo{display:block;width:100%;height:clamp(220px,22vw,320px);aspect-ratio:16/9;object-fit:cover;object-position:center center;border-radius:14px;box-shadow:0 32px 70px rgba(49,42,31,.18)}
 .review-card{position:absolute;left:-24px;bottom:30px;width:min(255px,58%);background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;box-shadow:0 22px 46px rgba(49,42,31,.16)}
 .review-card .stars{color:var(--secondary);font:800 12px/1 "Geist Mono",ui-monospace,monospace;text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px}
 .review-card p{margin:0 0 8px;color:var(--ink);font-size:14px;line-height:1.4}
