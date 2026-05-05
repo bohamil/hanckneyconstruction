@@ -40,6 +40,7 @@
     if (path.indexOf("/service-areas/") === 0) return "service_area";
     if (path.indexOf("/blog/") === 0 || path === "/blog.html") return "blog";
     if (path.indexOf("roof-replacement") !== -1) return "roof_replacement";
+    if (path.indexOf("radon-mitigation") !== -1) return "radon_mitigation";
     return "home";
   }
 
