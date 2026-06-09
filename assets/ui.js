@@ -37,4 +37,10 @@
       }
     }, {passive:true});
   }
+  // Header shadow on scroll
+  var head = document.querySelector('header');
+  if(head){
+    var onScroll = function(){ head.classList.toggle('scrolled', window.scrollY > 8); };
+    window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+  }
 })();
