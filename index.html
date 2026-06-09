@@ -15,7 +15,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://hackney-construction.com/" />
   <meta property="og:image" content="https://hackney-construction.com/images/gallery/roof-deck-replacement.jpg" />
-  <meta name="theme-color" content="#24364f" />
+  <meta name="theme-color" content="#10161d" />
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"RoofingContractor","name":"Hackney Roofing & Construction","image":"https://hackney-construction.com/images/gallery/roof-deck-replacement.jpg","areaServed":[{"@type":"Place","name":"South Central Iowa"},{"@type":"City","name":"Indianola"},{"@type":"City","name":"Chariton"},{"@type":"City","name":"Knoxville"},{"@type":"City","name":"Centerville"},{"@type":"City","name":"Osceola"},{"@type":"City","name":"Corydon"},{"@type":"City","name":"Albia"},{"@type":"City","name":"Norwalk"},{"@type":"City","name":"Carlisle"}],"telephone":"+1-641-203-8046","url":"https://hackney-construction.com/","address":{"@type":"PostalAddress","addressRegion":"IA","addressCountry":"US"},"priceRange":"Free inspections","hasOfferCatalog":{"@type":"OfferCatalog","name":"Roofing and exterior services","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Roof Replacement","url":"https://hackney-construction.com/roof-replacement.html"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"New Roof Installation"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Metal Roofing"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Storm Damage Roof Repair"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Hail Damage Roof Inspection"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Fresh Roof Rejuvenation"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Siding Repair and Replacement"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Gutter Repair and Installation"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Exterior Repairs"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Radon Mitigation","url":"https://hackney-construction.com/radon-mitigation.html"}}]},"sameAs":["https://www.google.com/maps?cid=10467835467409474794","https://www.facebook.com/p/Hackney-Construction-61559825340943/"]}
   </script>
@@ -40,6 +40,7 @@
       <a href="blog.html">Blog</a>
       <a class="nav-cta" href="tel:+16412038046" aria-label="Call for free inspection">Call (641) 203-8046</a>
     </nav>
+    <a class="nav-call-mini" href="tel:+16412038046" aria-label="Call Hackney Roofing now">Call now</a>
   </div>
 </header>
 
@@ -51,8 +52,8 @@
         <h1>The roof over your home, <em>handled honestly</em>.</h1>
         <p>Roof repair, replacement, Fresh Roof rejuvenation, metal roofing, siding, gutters, exterior repairs, and radon mitigation for homeowners across South Central Iowa. We inspect first, explain what is actually wrong, and give you clear options without pressure.</p>
         <div class="cta">
-          <a class="btn btn-primary" href="#quote">Get a free inspection</a>
-          <a class="btn btn-outline" href="tel:+16412038046">Call Cody directly</a>
+          <a class="btn btn-call" href="tel:+16412038046">Call Cody — (641) 203-8046</a>
+          <a class="btn btn-outline" href="#quote">Get a free inspection</a>
         </div>
         <div class="hero-metrics" aria-label="Hackney Roofing proof points">
           <div><b>20+ yrs</b><span>Iowa roofing experience</span></div>
@@ -61,7 +62,7 @@
         </div>
       </div>
       <div class="hero-photo-wrap">
-        <img class="hero-photo" src="images/project3.jpg" alt="Finished residential asphalt shingle roof with clean rooflines and blue sky" width="4000" height="1848">
+        <img class="hero-photo" src="images/project3.jpg" fetchpriority="high" alt="Finished residential asphalt shingle roof with clean rooflines and blue sky" width="4000" height="1848">
         <div class="review-card">
           <div class="stars" aria-hidden="true">5.0 rating</div>
           <p>"Honest pricing I was not expecting."</p>
@@ -293,8 +294,8 @@
         <p>Get a straight answer on repair vs. replacement, storm damage, materials, and timing before the next heavy rain.</p>
       </div>
       <div class="cta">
-        <a class="btn btn-primary" href="tel:+16412038046">Call (641) 203-8046</a>
-        <a class="btn btn-outline" href="roof-replacement.html">Roof Replacement</a>
+        <a class="btn btn-call" href="tel:+16412038046">Call (641) 203-8046</a>
+        <a class="btn btn-outline" href="#quote">Request a free quote</a>
       </div>
     </div>
   </section>
@@ -378,22 +379,22 @@
 
           <label class="visually-hidden" for="name">Name</label>
           <input id="name" name="entry.1248655158" placeholder="Name"
-                 required style="width:100%;padding:12px;margin-bottom:10px;border:1px solid #dfe5ea;border-radius:8px">
+                 required class="form-field">
 
           <label class="visually-hidden" for="phone">Phone</label>
           <input id="phone" name="entry.1015733403" placeholder="(123) 456-7890"
                  type="tel" inputmode="numeric" autocomplete="tel"
-                 required style="width:100%;padding:12px;margin-bottom:10px;border:1px solid #dfe5ea;border-radius:8px">
+                 required class="form-field">
 
           <label class="visually-hidden" for="notes">Notes</label>
           <textarea id="notes" name="entry.1791722024" placeholder="Leak location, roof age, etc."
-                    rows="4" style="width:100%;padding:12px;border:1px solid #dfe5ea;border-radius:8px"></textarea>
+                    rows="4" class="form-field"></textarea>
 
           <!-- Honeypot spam trap. -->
           <input type="text" name="website" tabindex="-1" autocomplete="off" style="display:none">
 
-          <div id="form-error" role="alert" style="color:#b00020;display:none;"></div>
-          <button class="btn" id="submitBtn" type="submit" style="margin-top:10px" disabled>Request Quote</button>
+          <div id="form-error" role="alert" style="display:none;"></div>
+          <button class="btn btn-call" id="submitBtn" type="submit" style="margin-top:10px" disabled>Request My Free Quote</button>
         </form>
 
         <div id="form-status" role="status" aria-live="polite" style="margin-top:10px"></div>
