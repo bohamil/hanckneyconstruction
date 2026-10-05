@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@500;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap');
-:root{color-scheme:dark;--primary:#2c4763;--primary-dark:#101820;--secondary:#d4682e;--secondary-dark:#f0a774;--accent:#8fbf92;--ink:#f2ede3;--ink-soft:#b9c2c9;--paper:#10161d;--paper-2:#161e27;--card:#1b2531;--line:#2c3947;--muted:#141c25;--ring:rgba(224,118,58,.35)}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font:16px/1.6 Geist,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--paper)}
+:root{color-scheme:dark;--primary:#2c4763;--primary-dark:#101820;--secondary:#d4682e;--action:#b9501d;--action-hover:#a4471c;--secondary-dark:#f0a774;--accent:#8fbf92;--ink:#f2ede3;--ink-soft:#b9c2c9;--paper:#10161d;--paper-2:#161e27;--card:#1b2531;--line:#2c3947;--muted:#141c25;--ring:rgba(224,118,58,.35)}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font:16px/1.6 Geist,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--paper)}
 a{color:var(--secondary-dark);text-decoration:none}a:hover{text-decoration:underline}
 img{max-width:100%}
 .container{max-width:1240px;margin:0 auto;padding:0 32px}
@@ -312,3 +312,14 @@ img{filter:none}
 .nav-toggle{flex:0 0 auto}
 }
 @media (max-width:640px){.grid-3{grid-template-columns:1fr}}
+
+/* Keep orange brand accents; use a darker orange for readable action text. */
+.btn-call,.btn.btn-call,.nav .nav-cta,.roof-page .nav-cta,
+.nav .nav-call-mini,.sticky-call .call,.conversion-band .btn-primary{
+  background:var(--action);color:#fff;
+}
+.btn-call:hover,.btn.btn-call:hover,.nav .nav-cta:hover,.roof-page .nav-cta:hover,
+.nav .nav-call-mini:hover,.sticky-call .call:hover,.conversion-band .btn-primary:hover{
+  background:var(--action-hover);color:#fff;filter:none;
+}
+.gallery-btn:hover{background:var(--action-hover);border-color:var(--action-hover)}
